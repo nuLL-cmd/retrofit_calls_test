@@ -1,4 +1,6 @@
-package com.automatodev.retrofitcallsteste;
+package com.automatodev.retrofitcallsteste.request;
+
+import com.automatodev.retrofitcallsteste.CoinDaddy;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
@@ -9,6 +11,6 @@ public interface RetrofitRequest {
     @GET("all/{value}")
     Call<CoinDaddy> getSingle(@Path("value")String value);
 
-    @GET("all/USD-BRL,EUR-BRL,BTC-BRL")
+    @GET("all")
     Call<String> getAll();
 }
