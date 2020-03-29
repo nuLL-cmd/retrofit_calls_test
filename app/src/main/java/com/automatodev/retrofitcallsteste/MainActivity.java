@@ -94,10 +94,10 @@ public class MainActivity extends AppCompatActivity {
                 JSONObject obj = new JSONObject(response.trim());
                 /*Passa para uma segunda string o mesmo objeto json porem agora filtrando pelo nome do NÓ do objeto a ser usado*/
                 String var =  obj.getString("Time Series FX (60min)");
-                //cria um novo objeto json agora definitivo, que recebe a variavel ja com o filtro aplicado
-                JSONObject objResp = new JSONObject(var);
+                //instanci novamento o objeto json agora definitivo, que recebe a variavel ja com o filtro aplicado
+                obj = new JSONObject(var);
                 //A cereja do bolo esta em criar um Interater<String> e atribuir todas as keys ou seja todos os tilos dos nós dos objetos json, podendo assim navegar agora dentro de um objeto JSON
-                Iterator<String> keys = objResp.keys();
+                Iterator<String> keys = obj.keys();
                 /*Equanto for possivel ir para a proxima key*/
                 while (keys.hasNext()) {
                     //atribui um keys.next() a uma string que sera usada como ponteiro para a chamada ((JSONObject) obj.get(key)).get("nome do campo dentro do no").toString()
