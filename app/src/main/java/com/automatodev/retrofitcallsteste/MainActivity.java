@@ -29,6 +29,8 @@ import retrofit2.converter.scalars.ScalarsConverterFactory;
 
 public class MainActivity extends AppCompatActivity {
 
+    private static final String TAG = "logx";
+
     @RequiresApi(api = Build.VERSION_CODES.P)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
                 .addConverterFactory(ScalarsConverterFactory.create()).build();
         AlphaRequest alpha = retrofit.create(AlphaRequest.class);
         //chamada do metodo da interface que contera os endpoints, aqui passamos apenas as variaveis que representaram o resultado das @Query que ja estao anotadas na chamada
-        Call<String> call = alpha.getSingleRange("FX_INTRADAY","USD","BRL",60+"min","H7CA8PZAVE3IJ82V");
+        Call<String> call = alpha.getSingleRange("FX_INTRADAY","USD","BRL","60min","H7CA8PZAVE3IJ82V");
         call.enqueue(new Callback<String>() {
             @Override
             public void onResponse(Call<String> call, Response<String> response) {
@@ -102,6 +104,7 @@ public class MainActivity extends AppCompatActivity {
                 while (keys.hasNext()) {
                     //atribui um keys.next() a uma string que sera usada como ponteiro para a chamada ((JSONObject) obj.get(key)).get("nome do campo dentro do no").toString()
                     String key = keys.next();
+                    Log.i(TAG,"Key: "+key);
 
                     //Agora voce pode atribuir os campos dentro de uma entidade generica nao havendo necessidade de criar uma classe para cada key conforme convencção.
                 }
