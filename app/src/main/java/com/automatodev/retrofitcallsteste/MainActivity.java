@@ -24,7 +24,6 @@ import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 
-import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.converter.scalars.ScalarsConverterFactory;
 
 public class MainActivity extends AppCompatActivity {
@@ -115,90 +114,4 @@ public class MainActivity extends AppCompatActivity {
             }
 
         }
-    public void LineChart_HelloChart() {
-        /*LineChartView lineChartView;
-        String[] axisData = {"Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept",
-                "Oct", "Nov", "Dec"};
-        int[] yAxisData = {50, 20, 15, 30, 20, 60, 15, 40, 45, 10, 90, 18};
-        lineChartView = findViewById(R.id.cubiclinechart    );
-        List yAxisValues = new ArrayList();
-        List axisValues = new ArrayList();
-        Line line = new Line(yAxisValues).setColor(Color.parseColor("#9C27B0"));
-        for (int i = 0; i < axisData.length; i++) {
-            axisValues.add(i, new AxisValue(i).setLabel(axisData[i]));
-        }
-        for (int i = 0; i < yAxisData.length; i++) {
-            yAxisValues.add(new PointValue(i, yAxisData[i]));
-        }
-        List lines = new ArrayList();
-        lines.add(line);
-        LineChartData data = new LineChartData();
-        data.setLines(lines);
-        Axis axis = new Axis();
-        axis.setValues(axisValues);
-        axis.setTextSize(16);
-        axis.setTextColor(Color.parseColor("#03A9F4"));
-        data.setAxisXBottom(axis);
-        Axis yAxis = new Axis();
-        yAxis.setName("Sales in millions");
-        yAxis.setTextColor(Color.parseColor("#03A9F4"));
-        yAxis.setTextSize(16);
-        data.setAxisYLeft(yAxis);
-        lineChartView.setLineChartData(data);
-        Viewport viewport = new Viewport(lineChartView.getMaximumViewport());
-        viewport.top = 110;
-        lineChartView.setMaximumViewport(viewport);
-        lineChartView.setCurrentViewport(viewport);
-        lineChartView.setZ(10f);*/
-    }
-
-    @RequiresApi(api = Build.VERSION_CODES.P)
-    public void Pie_AnyChart() {
-        /*Cartesian pie = AnyChart.bar();
-        List<DataEntry> entry = new ArrayList<>();
-        entry.add(new ValueDataEntry("Janeiro", 40));
-        entry.add(new ValueDataEntry("Feverieiro", 75));
-        entry.add(new ValueDataEntry("Março", 62));
-        entry.add(new ValueDataEntry("Abril", 67));
-        entry.add(new ValueDataEntry("Maio", 85));
-        entry.add(new ValueDataEntry("Junho", 40));
-        entry.add(new ValueDataEntry("Julho", 75));
-        entry.add(new ValueDataEntry("Agosto", 62));
-        entry.add(new ValueDataEntry("Setembro", 67));
-        entry.add(new ValueDataEntry("Outubro", 85));
-        entry.add(new ValueDataEntry("Novembro", 83));
-        entry.add(new ValueDataEntry("Dezembro", 57));
-        pie.setData(entry);
-        pie.getYAxis().setEnabled(false);
-        pie.getLegend().setMargin(new Double[]{20.2, 10.2});
-        AnyChartView anyChart = findViewById(R.id.cubiclinechart);
-        anyChart.setChart(pie);
-        pie.getXZoom().continuous(true);
-        anyChart.setOutlineAmbientShadowColor(Color.RED);
-        anyChart.setHorizontalScrollBarEnabled(true);*/
-    }
-
-    public void Line_anyChart() {
-/*        ValueLineChart mCubicValueLineChart = (ValueLineChart) findViewById(R.id.cubiclinechart);
-
-    ValueLineSeries series = new ValueLineSeries();
-        series.setColor(0xFF86B7F1);
-
-        series.addPoint(new ValueLinePoint("Jan", 2.4f));
-        series.addPoint(new ValueLinePoint("Feb", 3.4f));
-        series.addPoint(new ValueLinePoint("Mar", .4f));
-        series.addPoint(new ValueLinePoint("Apr", 1.2f));
-        series.addPoint(new ValueLinePoint("Mai", 2.6f));
-        series.addPoint(new ValueLinePoint("Jun", 1.0f));
-        series.addPoint(new ValueLinePoint("Jul", 3.5f));
-        series.addPoint(new ValueLinePoint("Aug", 2.4f));
-        series.addPoint(new ValueLinePoint("Sep", 2.4f));
-        series.addPoint(new ValueLinePoint("Oct", 3.4f));
-        series.addPoint(new ValueLinePoint("Nov", .4f));
-        series.addPoint(new ValueLinePoint("Dec", 1.3f));
-
-        mCubicValueLineChart.addSeries(series);
-        mCubicValueLineChart.setPressed(false);
-        mCubicValueLineChart.startAnimation();*/
-}
 }
