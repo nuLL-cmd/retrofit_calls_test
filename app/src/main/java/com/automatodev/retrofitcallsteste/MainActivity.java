@@ -63,30 +63,7 @@ public class MainActivity extends AppCompatActivity {
                 Log.e("logx","Error: "+t.getMessage(), t);
             }
         });
-
-/*
-        Retrofit retrofit = new Retrofit.Builder().baseUrl("https://economia.awesomeapi.com.br/")
-                .addConverterFactory(ScalarsConverterFactory.create())
-                .build();
-
-        RetrofitRequest request = retrofit.create(RetrofitRequest.class);
-
-        Call<String> call = request.getAll();
-        call.enqueue(new Callback<String>() {
-            @Override
-            public void onResponse(Call<String> call, Response<String> response) {
-                if (response.isSuccessful()) {
-                    if (response.body() != null) {
-                        String jsonresponse = response.body();
-                        writeTv(jsonresponse);
-                    }
-                }
-            }
-
-            @Override
-            public void onFailure(Call<String> call, Throwable t) {
-            }
-        });*/
+        
     }
 
         private void writeTv(String response) {
